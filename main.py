@@ -102,6 +102,11 @@ predicted_one = np.concatenate((train_predicted_one,test_predicted_one), axis=0)
 trainScore_one = model.evaluate(train_cp_one_x_f, train_cp_one_y, verbose=0)
 
 # Plotting general result
+# The blue curve is the contact torque from dataset
+# The orange curve is the contact torque predicted by the RNN
+# The green curve is the impact torque from dataset
+# The red curve is the impact torque predicted by the RNN
+# The vertical red line separates training and test data
 index = df.index
 index_one = df_one.index
 plt.plot(index, values)
